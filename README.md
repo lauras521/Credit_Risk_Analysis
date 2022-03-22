@@ -13,40 +13,51 @@ The following models were ran for this analysis
 2. Logistic Regression - SMOTE Oversampling
 3. Logistic Regression - Undersamping
 4. Logistic Regression - SMOTEEN Combination Over and Undersampling
-5. Balanced Random Forest Classifer
-6. Easy Ensemble Classifer
+5. Balanced Random Forest Classifier
+6. Easy Ensemble Classifier
 
 The following model outputs were analyzed for all 6 models. 
 
 * accuracy score
      *  measures how many observations in the testing set were correctly predicted by the model
 * precision (i.e. positive predictive value)
-     * mesaure of how reliable a positive classification is
+     * measure of how reliable a positive classification is
      * Precision = TP / (TP + FP)
 * recall/sensitivity (i.e. true positive rate)
      * ability of the classifier to find all the positive samples 
      * recall = TP / (TP + FN)
 * F1
-     * weighted average of the true postitive rate (recall) and precision  
+     * weighted average of the true positive rate (recall) and precision  
      * F1 = 2 ( precision * sensitivity ) / (precision + sensitivity)
      * a pronounced imbalance between sensitivity and precision will yield a low F1 score
-* support (total number of actual occurences in the dataset)
+* support (total number of actual occurrences in the dataset)
 
 
-|                  | Predicted Positive  |  Predicted Negative |
+|                  | Predicted High Risk  |  Predicted Low Risk |
 | -------------    | -------------       | -------------       |
-| Actual Positive  | True Positive (TP)  |  False Negative (FN)|
-| Actual Negative  | False Positive (FP) | True Negative (TN)|
+| Actual High Risk  | True Positive (TP)  |  False Negative (FN)|
+| Actual Low Risk  | False Positive (FP) | True Negative (TN)|
 
 ### Results
 
-See image below for a summary of the results above:
+See image below for a summary of the results:
 <p align="center">
   <img src = https://github.com/lauras521/Credit_Risk_Analysis/blob/fa76f574ebb08d0bea05947ef6cd228d3d143fd7/summary_of_all_tests.PNG>
 </p>
 
+The Easy Ensemble Classifier model has the highest accuracy score while the logistic regression undersampling model has the lowest balanced accuracy score.  
+
 ### Summary
-The company wants to make sure 
+For a credit card company there are many things to consider when reading the results of the models:
+
+* Downside to a False Positive (i.e. actually low risk application but identified as high risk application)
+    * you do not want a model that has a high rate of predicting low risk applications as high risk (i.e. false positive).  This would deny more people loans who would be good candidates for loans.
+    * a model to minimize false positives will have a high precision
+* Downside to a False Negative (i.e. actually high risk application but identified as low risk application)
+   * you do not want a model that has a high rate of predicting high risk applications as low risk (i.e. false negative).  This could cost the company significantly since these people would not be able to pay off their debt.   
+   * a model to minimize false negatives will have a high recall/sensitivity
+
+Our first priority will be to pick a model to minimize false negatives (i.e. high recall) and then review the false positive rate to try and minimize that next (i.e. high precision).  The Easy Ensemble Classifier model has the highest recall of any model.  You can see only 8 high risk candidates were actually predicted as low risk out of 17,205 applications.  Additionally, 983 low risk applications were predicted as high risk which is the smallest number of applicants of any model.  This model optimizes both metrics to provide the fewest false positives and false negatives amongst all models.  As a result, I would recommend the company proceeds using this model.  The company might want to considered trying to further optimize the actually low risk applications who are being predicted as high risk from this model. 
 
 
 ## Resources
