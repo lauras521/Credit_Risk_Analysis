@@ -42,7 +42,7 @@ The following model outputs were analyzed for all 6 models.
 
 See image below for a summary of the results:
 <p align="center">
-  <img src = https://github.com/lauras521/Credit_Risk_Analysis/blob/fa76f574ebb08d0bea05947ef6cd228d3d143fd7/summary_of_all_tests.PNG>
+  <img src = https://github.com/lauras521/Credit_Risk_Analysis/blob/d2946fa1b26111d5067930f40e93e83e9d1218a7/summary_of_all_tests.PNG>
 </p>
 
 The Easy Ensemble Classifier model has the highest accuracy score while the logistic regression undersampling model has the lowest balanced accuracy score.  
