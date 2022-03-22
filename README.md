@@ -23,6 +23,6 @@ See image below for a summary of the data above:
 
 
 ## Resources
-[link to Amazon Product Reviews Database](https://s3.amazonaws.com/amazon-reviews-pds/tsv/index.txt)
+[link to code for over and undersampling models](https://github.com/lauras521/Credit_Risk_Analysis/blob/13d83effd92bd616b97250ea51257ed6a42cd04d/credit_risk_resampling.ipynb)
 
-[link to code](https://github.com/lauras521/Amazon_Vine_Analysis/blob/8288ba2f5032e0c5f9250b9cf6d276e6e027cd89/Vine_Review_Analysis.ipynb)
+[link to code for BalancedRandomForestClassifier and EasyEnsembleClassifier models](https://github.com/lauras521/Credit_Risk_Analysis/blob/13d83effd92bd616b97250ea51257ed6a42cd04d/credit_risk_ensemble.ipynb)
