@@ -15,7 +15,7 @@ The purpose of this project is to
 
 See image below for a summary of the data above:
 <p align="center">
-  <img src = https://github.com/lauras521/Amazon_Vine_Analysis/blob/8288ba2f5032e0c5f9250b9cf6d276e6e027cd89/Resources/deliverable_2_results_image.PNG>
+  <img src = https://github.com/lauras521/Credit_Risk_Analysis/blob/fa76f574ebb08d0bea05947ef6cd228d3d143fd7/summary_of_all_tests.PNG>
 </p>
 
 ### Summary
